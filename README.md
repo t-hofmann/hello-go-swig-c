@@ -8,11 +8,19 @@
 cd cmd/hello
 go build .
 ```
+Execute the resulting binary:
+```
+./hello
+```
 
 ### Building the C Program
 ```
 cd cmd/hello-c
 gcc main.c -o hello
+```
+To proove that the `C`-code is actually compiling and working, execute the resulting binary: 
+```
+./hello
 ```
 
 ## Wrapper Files
@@ -27,7 +35,7 @@ swig -go -intgosize 64 hello.i
 #    hello.go
 ```
 
-But be aware of, that this will lead to conflicts when building, since then multiple files (the temporary wrapper files and the explicitly generated ones) will contain the wrapped functionality, leading to redeclarations.
+Be aware that this will lead to conflicts when building. Since then multiple files (the temporary wrapper files and the explicitly generated ones) will contain the same wrapped functionality, leading to redeclarations.
 
 ## Function Names
 
