@@ -44,15 +44,15 @@ Please note, that public function names in Go are starting with capital letters.
 ## Files
 ```
 .
-├── README.md               # this file
+├── README.md        # this file
 ├── cmd
 │   ├── hello
-│   │   └── main.go         # GO "hello world" program
+│   │   └── main.go  # GO "hello world" program
 │   └── hello-c
-│       └── main.c          # C "hello world" program
-├── hello.c                 # library with the function "hello()"
-├── hello.swig              # SWIG interface file, 
-│                           #   since the go-tools expects a file 
-│                           #   ending with ".swig" to interface with "c"
-└── hello_test.go           # go-testfile
+│       └── main.c   # C "hello world" program
+├── hello.c          # library with the function "hello()"
+├── hello.swig       # SWIG interface file, 
+│                    #   since the go-tools expects a file 
+│                    #   ending with ".swig" to interface with "c"
+└── hello_test.go    # go-testfile
 ```
